@@ -21,7 +21,7 @@ Inspect every local source or style-reference image with `view_image` before gen
 
 ## Workflow
 
-1. Analyze the source image for the main subject, pose, recognizable accessories, dominant colors, crop constraints, and visible watermarks.
+1. Analyze the source image for the main subject, pose, recognizable accessories, dominant colors, crop constraints, and visible watermarks. Classify a human subject as portrait, half-body, or full-body. Treat it as full-body when the head, torso, and most or all of both legs are visible and the standing silhouette or outfit is important.
 2. Calculate the month's weekday alignment and number of days. Write the complete expected calendar grid into the generation prompt.
 3. Choose a varied palette derived from the photo. Keep the center panel dark or mid-tone enough for readable cream text; give the doodle panel a lighter companion color.
 4. Generate a wide three-panel ticket using the fixed composition and style rules in [references/design-spec.md](references/design-spec.md).
@@ -52,6 +52,10 @@ The preferred illustration is charming and handmade, not a realistic pencil port
 - Loose, incomplete colored-pencil fills that leave paper visible.
 - Recognizable pose, clothing, accessories, pet markings, or object silhouette from the source.
 - Mildly softened proportions only. Avoid extreme chibi, huge doll eyes, baby faces, and childlike bodies unless the source is a child.
+- For full-body adults, preserve a standing proportion of roughly 1:6 to 1:7.5 head-to-body height. Keep the head near 13%-17% of the complete figure height and the legs about 45%-52% of the figure height.
+- Do not create a five-five silhouette. Do not shorten the legs, enlarge the head, drop the waist, or widen the torso to create cuteness.
+- Make full-body figures charming through rounded facial marks, restrained blush, lively gesture, and rough crayon texture rather than anatomical distortion.
+- When the source is full-body and the pose or outfit matters, keep the doodle full-body. Fit it vertically within the panel with clear space above the head and below the feet; do not silently convert it to a waist-up portrait.
 - Strong negative space: keep the illustration compact and centered, occupying roughly 55%-65% of the right panel with at least 15% clear margin on all sides.
 - No part of the doodle should touch ticket edges or perforation notches.
 
@@ -78,6 +82,7 @@ Before presenting the result, verify:
 - The ticket has clearly visible warm-ivory outer margin above and below.
 - The left image fills its panel without distortion.
 - The right doodle retains the subject's key cues and has visible breathing room.
+- A full-body adult doodle has a clearly adult silhouette: head no more than about one-sixth of the figure, natural waist placement, long legs, and a recognizable full-body pose.
 - Hands, held objects, microphones, and accessories are not duplicated or malformed.
 
 When the image model renders calendar text incorrectly, fix only the calendar panel while preserving the photo, doodle, ticket geometry, and palette.

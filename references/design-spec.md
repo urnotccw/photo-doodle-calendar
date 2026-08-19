@@ -42,8 +42,11 @@ Always provide the image model with an explicit date grid. Do not merely say "an
 - Use a lighter related background color and preserve its paper texture.
 - Draw one compact vignette centered slightly above the visual middle.
 - Target 55%-65% panel occupancy and at least 15% clear margin on every side.
-- Prefer a bust, waist-up, seated, or otherwise compact pose when a full body would fill the panel.
+- Prefer a compact crop for portrait sources. For a full-body source whose stance or outfit is important, keep the complete figure and scale it down instead of changing it to a bust or waist-up pose.
 - Keep the key gesture and identifying details, but remove background clutter.
+- For an adult full-body source, use roughly 1:6 to 1:7.5 head-to-body height: head about 13%-17% of the complete figure and legs about 45%-52%.
+- Preserve the source waistline, limb length, stance, and outfit silhouette. Do not enlarge the head or compress the legs to make the drawing cute.
+- Let line softness, small facial marks, restrained blush, and loose color fill carry the charm.
 
 ### Line And Fill
 
@@ -57,7 +60,7 @@ Always provide the image model with an explicit date grid. Do not merely say "an
 ### Cuteness Level
 
 - Friendly and softly stylized rather than childish.
-- Head may be modestly enlarged, but the body and limbs remain plausible.
+- For portraits or half-body figures, the head may be modestly enlarged while the body and limbs remain plausible. For adult full-body figures, do not enlarge the head beyond roughly one-sixth of total figure height.
 - Eyes may be simplified and slightly rounder, but not oversized anime-doll eyes unless present in the source.
 - Preserve age cues, hairstyle, pose, outfit, and accessories.
 
