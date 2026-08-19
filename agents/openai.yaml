@@ -1,0 +1,8 @@
+interface:
+  display_name: "Photo Doodle Calendar"
+  short_description: "Turn photos into ticket-style doodle calendars"
+  brand_color: "#2F7774"
+  default_prompt: "Use $photo-doodle-calendar to turn my uploaded photo into a ticket-style monthly calendar with a cute hand-drawn subject."
+
+policy:
+  allow_implicit_invocation: true
