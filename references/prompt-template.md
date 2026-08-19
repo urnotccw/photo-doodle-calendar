@@ -4,7 +4,7 @@ Use this reference when building the final image-generation request. Replace bra
 
 ```text
 Use case: stylized-concept
-Asset type: wide horizontal monthly calendar ticket
+Asset type: landscape monthly calendar card with a centered horizontal ticket
 Input images: Image 1 is the source photo and subject reference. [Image 2 is a style reference only.]
 
 Primary request: Create a [YEAR] [MONTH] three-panel ticket calendar from Image 1.
@@ -15,16 +15,22 @@ Middle panel: Show an elegant and accurate [MONTH] [YEAR] calendar. Use large '[
 
 Right panel: Redraw the main subject as a compact, charming handmade doodle. Use chunky uneven black crayon/colored-pencil outlines, slight double lines, simplified friendly facial features, restrained blush where appropriate, and loose incomplete color fills that leave paper visible. Preserve [IDENTITY CUES]. Keep the illustration centered and occupying only 55%-65% of the panel, with at least 15% empty background on every side. No part may touch the ticket edge or perforation notch.
 
-Composition: Landscape ticket close to 3:1. Left photo about 30%, center calendar about 45%, right doodle about 25%. Use semicircular separator notches, softly scalloped outer edges, and warm ivory fibrous paper.
+Composition: Use a standard landscape canvas around 16:9, never a 3:1 full-canvas banner unless explicitly requested. Center one long ticket at about 88%-92% of the canvas width and 60%-68% of the canvas height, leaving clearly visible warm-ivory margins above and below. Keep the inner ticket around 2.2:1 to 2.5:1. Within it, use a left photo panel about 30%, center calendar about 45%, and right doodle panel about 25%. Keep all three panels connected and aligned. Use semicircular separator notches, softly scalloped outer edges, and warm ivory fibrous paper. Do not stretch any panel.
 
 Color palette: Center panel [DARK SOURCE-DERIVED COLOR] with warm cream serif text. Right panel [LIGHT RELATED OR COMPLEMENTARY COLOR]. Doodle accents [2-4 SOURCE COLORS]. Avoid an orange-dominant or monochrome result unless requested.
 
 Constraints: The calendar must be correct and legible. The year must appear at the center panel's upper-right. No date may be circled, highlighted, underlined, boxed, bolded, recolored, marked, or decorated. No text, logo, or watermark in the doodle panel.
 
-Avoid: realistic pencil portrait, dense hatching, polished vector art, excessive cuteness, extreme chibi, huge doll eyes, baby face, distorted anatomy, malformed hands, extra fingers, duplicate held objects, full-panel doodle, artwork touching edges, decorative handwriting, date markers.
+Avoid: ultra-wide full-canvas banner, realistic pencil portrait, dense hatching, polished vector art, excessive cuteness, extreme chibi, huge doll eyes, baby face, distorted anatomy, malformed hands, extra fingers, duplicate held objects, full-panel doodle, artwork touching edges, decorative handwriting, date markers.
 ```
 
 ## Targeted Retry Prompts
+
+### Canvas Is Too Wide
+
+```text
+Reframe the entire result onto a standard 16:9 landscape canvas. Keep the existing three-panel ticket centered at about 88%-92% of the canvas width and 60%-68% of its height. Restore visible warm-ivory outer margin above and below. Preserve the panel proportions and content; do not horizontally stretch any panel. The full output must not exceed a 2:1 aspect ratio.
+```
 
 ### Doodle Is Too Large
 

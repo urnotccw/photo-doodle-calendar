@@ -1,6 +1,6 @@
 ---
 name: photo-doodle-calendar
-description: Turn an uploaded photo into a wide three-panel ticket-style monthly calendar with the original photo, an accurate calendar, and a cute rough hand-drawn subject illustration. Use for photo calendar cards, collectible calendar tickets, or month-by-month calendar series; not for ordinary calendar scheduling or text-only calendar tables.
+description: Turn an uploaded photo into a landscape three-panel ticket-style monthly calendar with the original photo, an accurate calendar, and a cute rough hand-drawn subject illustration. Use for photo calendar cards, collectible calendar tickets, or month-by-month calendar series; not for ordinary calendar scheduling or text-only calendar tables.
 ---
 
 # Photo Doodle Calendar
@@ -31,7 +31,9 @@ Inspect every local source or style-reference image with `view_image` before gen
 
 ## Required Invariants
 
-- Use a horizontal ticket close to 3:1 with three adjacent panels: photo about 30%, calendar about 45%, doodle about 25%.
+- Use a standard landscape output canvas around 16:9; an aspect ratio from 1.8:1 to 2:1 is acceptable. Never default to a 3:1 banner unless the user explicitly requests one.
+- Center one long ticket inside the canvas at roughly 88%-92% of the canvas width and 60%-68% of the canvas height. Leave clearly visible warm-ivory outer margins, especially above and below.
+- Keep the inner ticket around 2.2:1 to 2.5:1, with three adjacent panels: photo about 30%, calendar about 45%, doodle about 25%.
 - Fill the left panel edge to edge with a proportional crop. Keep the subject recognizable and omit source watermarks or account overlays when a safe crop can do so.
 - Put a large two-digit month and abbreviated month name at the center panel's upper-left.
 - Put the four-digit year at the center panel's upper-right.
@@ -72,6 +74,8 @@ Before presenting the result, verify:
 - Every date appears once in the correct weekday column.
 - The year is visible in the upper-right of the calendar panel.
 - No date is marked by default.
+- The full output is no wider than 2:1 unless the user explicitly requested an ultra-wide image.
+- The ticket has clearly visible warm-ivory outer margin above and below.
 - The left image fills its panel without distortion.
 - The right doodle retains the subject's key cues and has visible breathing room.
 - Hands, held objects, microphones, and accessories are not duplicated or malformed.

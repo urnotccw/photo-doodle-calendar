@@ -4,8 +4,11 @@ Use this reference when composing or reviewing the calendar card.
 
 ## Canvas And Ticket
 
-- Landscape raster image close to a 3:1 aspect ratio.
-- One connected ticket centered on a warm ivory, lightly fibrous paper field.
+- Use a standard landscape raster canvas around 16:9. An aspect ratio from 1.8:1 to 2:1 is acceptable.
+- Do not default to a 3:1 full canvas. That creates an overly long banner and removes the intended breathing room.
+- Center one connected ticket on a warm ivory, lightly fibrous paper field.
+- The ticket should occupy about 88%-92% of the canvas width and 60%-68% of its height, leaving obvious outer margin above and below.
+- Keep the inner ticket itself around 2.2:1 to 2.5:1 so it feels long without making the whole image ultra-wide.
 - Three adjacent panels with stable proportions:
   - Left photo: 30%.
   - Center calendar: 45%.
