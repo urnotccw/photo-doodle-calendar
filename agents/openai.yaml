@@ -1,8 +1,8 @@
 interface:
   display_name: "Photo Doodle Calendar"
-  short_description: "Turn photos into ticket-style doodle calendars"
+  short_description: "Create matched print and ticket-preview calendars"
   brand_color: "#2F7774"
-  default_prompt: "Use $photo-doodle-calendar to turn my uploaded photo into a ticket-style monthly calendar with a cute hand-drawn subject."
+  default_prompt: "Use $photo-doodle-calendar to create two matched monthly calendar files from my uploaded photo: a complete 150 x 60 mm rectangular print master and a ticket-style presentation preview."
 
 policy:
   allow_implicit_invocation: true

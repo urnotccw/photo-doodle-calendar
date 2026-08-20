@@ -2,31 +2,54 @@
 
 Use this reference when composing or reviewing the calendar card.
 
+## Two Required Outputs
+
+Create both files from one shared artwork:
+
+1. **Print master:** an opaque rectangular `150 x 60 mm` image at `1772 x 709 px`, `300 PPI`, PNG. The three panels fill the complete canvas. There is no surrounding background, padding, transparency, hole, notch, scallop, rounded corner, or shadow.
+2. **Presentation preview:** a separate 16:9 image derived from the verified print master. It adds the warm paper field and ticket-shaped mask for presentation only.
+
+Never regenerate the preview independently. Deriving it from the print master guarantees identical dates, photo crop, doodle, and colors.
+
 ## Canvas And Ticket
 
 - Use a standard 16:9 landscape preview canvas. The preview canvas is not the printable object and does not determine physical print size.
-- The inner three-panel ticket is the print region. Keep it exactly 2.5:1 and place its outer boundary at stable normalized bounds: left `5%`, top `18%`, right `95%`, bottom `82%` on the default preview.
-- Default ticket print master: exactly `25 x 10 cm`, `2953 x 1181 px`, `300 PPI`, PNG.
+- The complete three-panel rectangle is the print region. Keep it exactly 2.5:1 with straight outer edges.
+- Default print master: exactly `150 x 60 mm`, `1772 x 709 px`, `300 PPI`, PNG.
+- In the presentation preview, place the masked ticket at stable normalized bounds: left `5%`, top `18%`, right `95%`, bottom `82%`.
 - A user-specified ticket size may replace the default, but convert it to one exact pixel width and height and keep that specification unchanged across the whole series.
-- Extract the full ticket, including scalloped edges and separator notches, while excluding the surrounding preview field. Preserve the complete ticket during normalization: scale proportionally to fit and add matching warm-ivory padding when needed. Never stretch the image and do not crop ticket content.
+- Extract the full straight-edged rectangle while excluding the temporary production field. Normalize it edge to edge with no padding. If the extracted ratio differs materially from 2.5:1, correct the generation instead of cropping important panel content.
 - Do not default to a 3:1 full canvas. That creates an overly long banner and removes the intended breathing room.
 - Center one connected ticket on a warm ivory, lightly fibrous paper field.
 - The ticket should occupy about 88%-92% of the canvas width and 60%-68% of its height, leaving obvious outer margin above and below.
 - Keep the inner ticket itself around 2.2:1 to 2.5:1 so it feels long without making the whole image ultra-wide.
 - Three adjacent panels with stable proportions:
-  - Left photo: 30%.
-  - Center calendar: 45%.
-  - Right doodle: 25%.
-- Small semicircular notches where panels meet.
-- Softly scalloped outer vertical edges.
+  - Left photo: 30%, `45 mm`, `532 px`.
+  - Center calendar: 45%, `67.5 mm`, `797 px`.
+  - Right doodle: 25%, `37.5 mm`, `443 px`.
+- Integer print-master boundaries: photo `x=0..532`, calendar `x=532..1329`, doodle `x=1329..1772`.
+- The print master has no notches or scallops.
+- The preview mask uses semicircular notches where panels meet and softly scalloped outer vertical edges.
 - Flat printed colors with subtle paper grain; no drop-shadow-heavy card UI.
 
-### Ticket Print Export
+### Print Export
 
-- Export the cropped ticket master as PNG to avoid repeated lossy compression. Keep the full-canvas image as a separate preview file.
+- Export the rectangular print master as PNG to avoid repeated lossy compression. Generate the presentation preview from that PNG.
 - Set the file's PPI metadata to `300` by default. PPI metadata does not replace the required pixel dimensions; both must be checked.
-- Keep important content inside the ticket. Add bleed only when the user or print shop supplies an exact bleed requirement.
-- Reopen the exported ticket and confirm exactly `2953 x 1181 px`. A visually correct ticket with the wrong dimensions is not a finished print deliverable.
+- Keep important content inside the rectangle. Add bleed only when the user or print shop supplies an exact bleed requirement.
+- Reopen the exported master and confirm exactly `1772 x 709 px`, opaque RGB, and filled at all four corners. A visually correct image with the wrong dimensions or decorative holes is not a finished print deliverable.
+
+### Preview Edge Geometry
+
+Apply these values only to the presentation preview, scaling them from the ticket height:
+
+- Outer corner cutout radius: `2%` of ticket height (`14 px` at print-master scale).
+- Separator notch radius: `2%` of ticket height (`14 px` at print-master scale).
+- Separator centers: at `30%` and `75%` of ticket width, on both the top and bottom edges.
+- Left and right scalloped edges: `16` cycles per vertical edge.
+- Scallop inward depth: `1.5%` of ticket height (`11 px` at print-master scale).
+- Top and bottom edges remain straight except for the separator notches.
+- Preview field: warm ivory `#f3eedf`, lightly fibrous, with only a faint contact shadow.
 
 ## Left Photo Panel
 
@@ -45,6 +68,8 @@ Use this reference when composing or reviewing the calendar card.
 - Classic serif typography, warm cream color, generous spacing.
 - The calendar area should feel calm and editorial, not like an app widget.
 - No selected-day treatment by default.
+
+For the default `797 x 709 px` center panel, use the deterministic layout in [calendar-layout.md](calendar-layout.md). Prefer programmatic text placement when exact printing matters.
 
 Always provide the image model with an explicit date grid. Do not merely say "an accurate calendar".
 
