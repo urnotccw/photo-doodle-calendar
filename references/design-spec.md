@@ -4,7 +4,11 @@ Use this reference when composing or reviewing the calendar card.
 
 ## Canvas And Ticket
 
-- Use a standard landscape raster canvas around 16:9. An aspect ratio from 1.8:1 to 2:1 is acceptable.
+- Use a standard 16:9 landscape preview canvas. The preview canvas is not the printable object and does not determine physical print size.
+- The inner three-panel ticket is the print region. Keep it exactly 2.5:1 and place its outer boundary at stable normalized bounds: left `5%`, top `18%`, right `95%`, bottom `82%` on the default preview.
+- Default ticket print master: exactly `25 x 10 cm`, `2953 x 1181 px`, `300 PPI`, PNG.
+- A user-specified ticket size may replace the default, but convert it to one exact pixel width and height and keep that specification unchanged across the whole series.
+- Extract the full ticket, including scalloped edges and separator notches, while excluding the surrounding preview field. Preserve the complete ticket during normalization: scale proportionally to fit and add matching warm-ivory padding when needed. Never stretch the image and do not crop ticket content.
 - Do not default to a 3:1 full canvas. That creates an overly long banner and removes the intended breathing room.
 - Center one connected ticket on a warm ivory, lightly fibrous paper field.
 - The ticket should occupy about 88%-92% of the canvas width and 60%-68% of its height, leaving obvious outer margin above and below.
@@ -16,6 +20,13 @@ Use this reference when composing or reviewing the calendar card.
 - Small semicircular notches where panels meet.
 - Softly scalloped outer vertical edges.
 - Flat printed colors with subtle paper grain; no drop-shadow-heavy card UI.
+
+### Ticket Print Export
+
+- Export the cropped ticket master as PNG to avoid repeated lossy compression. Keep the full-canvas image as a separate preview file.
+- Set the file's PPI metadata to `300` by default. PPI metadata does not replace the required pixel dimensions; both must be checked.
+- Keep important content inside the ticket. Add bleed only when the user or print shop supplies an exact bleed requirement.
+- Reopen the exported ticket and confirm exactly `2953 x 1181 px`. A visually correct ticket with the wrong dimensions is not a finished print deliverable.
 
 ## Left Photo Panel
 
